@@ -45,6 +45,39 @@
         <link rel="stylesheet" media="screen" href="owl-carousel/owl-carousel/owl.theme.css">
         <link rel="stylesheet" media="screen" href="yamm/yamm/yamm.css" >
         <!-- <link rel="stylesheet" media="screen" href="yamm/demo/css/bootstrap-theme.min.css"> -->
+        <script type="text/javascript" src="owl-carousel/assets/js/jquery-1.9.1.min.js"></script>
+        <script type="text/javascript">
+            /*$.ajax({
+                url: "https://appment.s3.amazonaws.com/products.json",
+                success: function(result) {
+                    var obj = JSON.parse(result.toString());
+                    console.log(obj);
+                }
+            });*/
+
+                    $('document').ready(function(){
+                        var products = [
+                        {
+                            "productId": 1,
+                            "productName": "test",
+                            "productimagename": "t1.png",
+                            "productdesc": "sdsdsdsdsds sdsds"
+                        },
+                        {
+                            "productId": 1,
+                            "productName": "test1",
+                            "productimagename": "t2.png",
+                            "productdesc": "sdsdsdsds22ds sdsds"
+                        }
+                    ];
+                    $.each(products, function(index, element){
+                        $('#prod').append('<div class="col-xs-6 col-sm-2"><a href="#" class="thumbnail">'+
+                            '<img alt="150x190" src="https://appment.s3.amazonaws.com/'+element.productimagename+'"></a>'+
+                            '<div>'+element.productdesc+'</div></div>');
+                    });
+                });
+
+        </script>
     </head>
     <body class="one-page parallax-version">
         <!--[if lt IE 7]>
@@ -134,31 +167,8 @@
                                               <ul class="dropdown-menu">
                                                 <li>
                                                   <div class="yamm-content">
-                                                    <div class="row">
-                                                      <div class="col-xs-6 col-sm-2">
-                                                        <a href="#" class="thumbnail">
-                                                            <img alt="150x190" src="images/product1.jpg">
-                                                        </a><div>inj.ace 1gm</div></div>
-                                                      <div class="col-xs-6 col-sm-2">
-                                                        <a href="#" class="thumbnail">
-                                                            <img alt="150x190" src="images/product2.jpg"></a>
-                                                            <div>inj.act-tz 4.5gm</div></div>
-                                                      <div class="col-xs-6 col-sm-2">
-                                                        <a href="#" class="thumbnail">
-                                                            <img alt="150x190" src="images/product3.jpg"></a>
-                                                            <div>inj.jcef 1.5gm</div></div>
-                                                      <div class="col-xs-6 col-sm-2">
-                                                        <a href="#" class="thumbnail">
-                                                            <img alt="150x190" src="images/product1.jpg"></a>
-                                                            <div>inj.t-jet 50gm</div></div>
-                                                      <div class="col-xs-6 col-sm-2">
-                                                        <a href="#" class="thumbnail"> 
-                                                            <img alt="150x190" src="images/product2.jpg"></a>
-                                                            <div>inj.j-plan400/200mg</div></div>
-                                                      <div class="col-xs-6 col-sm-2">
-                                                        <a href="#" class="thumbnail">
-                                                            <img alt="150x190" src="images/product3.jpg"></a>
-                                                            <div>inj.doriklin 500mg</div></div>
+                                                    <div class="row" id="prod">
+                                                      
                                                     </div>
                                                   </div>
                                                 </li>
@@ -176,10 +186,10 @@
             <!-- home-section -->
 
             <div class="nesto-section parallax-section">
-	            <div class="container parallax-section">
-		            <div class="row">
-		            	<div id="owl-demo" class="owl-carousel owl-theme">
-		            		<div class="item active">
+                <div class="container parallax-section">
+                    <div class="row">
+                        <div id="owl-demo" class="owl-carousel owl-theme">
+                            <div class="item active">
                                 <img src="images/image2.jpg" width="100%" alt="GTA V">
                                 <div class="container">
                                     <div class="carousel-caption textAlter">
@@ -188,16 +198,16 @@
                                     </div>
                                 </div>
                             </div>
-		            		<div class="item ">
+                            <div class="item ">
                                 <img src="images/image3.jpg"  width="100%" alt="Jain Pharma">
                                 <div class="container">
                                     <div class="carousel-caption textAlter">
                                         <h1 style="color:#fff">Jain Pharmaceuticals</h1>
-                                        <p>Jain pharmaceuticals elucidates journey and  the challenges faced by the medical fraternity and the patients,  We came up with a vision of providing cost effective therapies  for chronic disease within a reach of a common man  by leveraging India's cost advantage to deliver affordable healthcare solutions to patients, partners and healthcare systems.</p>
+                                        <p>Jain pharmaceuticals elucidates journey and  the challenges faced by the medical fraternity and the patients,  We came up with a vision of providing cost effective therapies  for chronic disease within a reach of a common man  by leveraging India's cost advantage to deliver affordable healthcare solutions to patients, partners and healthcare systems.</p>
                                     </div>
                                 </div>
                             </div>
-<!-- 		            		<div class="item">
+<!--                            <div class="item">
                                 <img src="images/better_health.jpg" width="100%" alt="Mirror Edge">
                                 <div class="container">
                                     <div class="carousel-caption textAlter">
@@ -220,7 +230,7 @@
                                 <div class="container">
                                     <div class="carousel-caption textAlter">
                                         <h1 style="color:#fff">Jain Pharmaceuticals</h1>
-                                        <p>Jain Pharmaceuticals came up with a vision to providing quality therapies at affordable  price .Initially with critical care products in basket Jain Pharmaceuticals was launched in Pune, which in one year  developed and market a broad range of pharmaceutical products globally.</p>
+                                        <p>Jain Pharmaceuticals came up with a vision to providing quality therapies at affordable  price .Initially with critical care products in basket Jain Pharmaceuticals was launched in Pune, which in one year  developed and market a broad range of pharmaceutical products globally.</p>
                                     </div>
                                 </div>
                             </div> -->
@@ -229,14 +239,14 @@
                                 <div class="container">
                                     <div class="carousel-caption textAlter">
                                         <h1 style="color:#fff">Jain Pharmaceuticals</h1>
-                                        <p>Jain Pharmaceutical’s vision is to deliver high-tech products, which will satisfy the needs of customers at a competitive price keeping quality in concern. We are in market to create value for all the constituents we serve: our customers, consumers and the community by comprehensive business strategy. We believe in
+                                        <p>Jain Pharmaceutical’s vision is to deliver high-tech products, which will satisfy the needs of customers at a competitive price keeping quality in concern. We are in market to create value for all the constituents we serve: our customers, consumers and the community by comprehensive business strategy. We believe in
                                         “There are no secrets to success. It is the result of preparation, hard work”</p>
                                     </div>
                                 </div>
                             </div>
-		            	</div>
-		            </div>
-	            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- Section 2 -->
             <div class="nesto-section-grey" id="section-2">
@@ -264,13 +274,13 @@
                                 </div>
                                 <div class="member-desc">
                                     <p>Jain Pharmaceuticals has a strong market presence in the states of Maharashtra , Goa, Gujrat, Madhya Pradesh, Andhra Pradesh and Karnatka.
-											The dedicated and experienced sales force maintains a very good liaison and customer support system.
-									</p>
+                                            The dedicated and experienced sales force maintains a very good liaison and customer support system.
+                                    </p>
                                 </div> 
                                 <div class="">
-                                	<a href="#section-1" title="Read More" data-scroll class="btn btn-lg">
-                                		Read More
-                                	</a>
+                                    <a href="#section-1" title="Read More" data-scroll class="btn btn-lg">
+                                        Read More
+                                    </a>
                                 </div>                            
                             </div>
                         </div>
@@ -286,9 +296,9 @@
                                     <p>Jain Pharmaceuticals are committed to provide quality services to meet the expectations of our customers.  This approach has helped us in establishing long term relationships with our esteemed customers by coming up with innovative products.</p>
                                 </div>
                                 <div class="">
-                                	<a href="#section-1" title="Read More" data-scroll class="btn btn-lg">
-                                		Read More
-                                	</a>
+                                    <a href="#section-1" title="Read More" data-scroll class="btn btn-lg">
+                                        Read More
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -305,9 +315,9 @@
                                     <p>If you have been into similar drive and would like us to be part of it, please write to us and we will be glad to hear out and see avenues on how we can be of best help.</p>
                                 </div>
                                 <div class="">
-                                	<a href="#section-1" title="Read More" data-scroll class="btn btn-lg">
-                                		Read More
-                                	</a>
+                                    <a href="#section-1" title="Read More" data-scroll class="btn btn-lg">
+                                        Read More
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -388,7 +398,7 @@
                                 </div>
                                 <div class="section-desc wow fadeInUp" data-wow-duration="1.5s">
                                     <h5>Jain Pharmaceutical was pioneered by <strong>Mr.Prashant Jain.</strong> He is the Managing Director and CEO of the Jain Pharmaceuticals. He spearheads business development and expansion initiatives of Jain Pharmaceutical. After completion of his Management degree from Symbiosis Institutes Pune,in International Trade and Marketing, He worked with reputed pharmaceutical companies on many domestic and international business development projects and proved himself as an asset to the industry through his innovative and out of the box ideas. He always believed in- <blockquote cite="#"><p><b>“Excellence is to do a common thing in an uncommon way”.</b></p></blockquote>
-									</h5>
+                                    </h5>
                                 </div>
 <!--                                 <div class="">
                                     <a href="#section-1" title="Read More" data-scroll class="btn btn-lg">
@@ -584,7 +594,7 @@
                                             <br />
                                             Balewadi(baner annexe)
                                             <br />
-											Pune-411045
+                                            Pune-411045
                                         </p>
                                     </li>
                                     <li>
@@ -614,7 +624,7 @@
                     <div id="map-close-button"><i class="fa fa-times"></i></div>
                     <div id="map"></div>
                 </div>
-		    </div>
+            </div>
 
             <!-- footer -->
             <footer id="footer">
@@ -675,7 +685,6 @@
         </div>
         <!-- javascript -->
         <!-- <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script> -->
-        <script type="text/javascript" src="owl-carousel/assets/js/jquery-1.9.1.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
         <!-- <script type="text/javascript" src="php/contact-form/js/jquery.contact.js"></script> -->
@@ -688,7 +697,7 @@
         <![endif]-->
         <script type="text/javascript">
         $(document).ready(function() {
-		  $("#owl-demo").owlCarousel({
+          $("#owl-demo").owlCarousel({
             navigation : false,
             autoPlay: true,
             slideSpeed: 300,
@@ -698,7 +707,6 @@
             pagination: true,
             stopOnHover: true,
             goToFirst: true,
-
             /*slideSpeed: 200,    //Slide speed in milliseconds
             paginationSpeed: false, //Pagination speed in milliseconds
             autoPlay: false,        //Auto play per slide. Change to any integrer for example "paginationSpeed : 8000" to play every 8 seconds
@@ -714,8 +722,8 @@
             itemsDesktopSmall:[979,3],  //As above.
             itemsTablet:[768,2],    //As above.
             itemsMobile:[479,1],    //As above*/
-		  });
-		});
+          });
+        });
         </script>
         </script>
         <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css"></script>
