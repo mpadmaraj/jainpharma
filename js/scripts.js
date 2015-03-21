@@ -84,14 +84,14 @@ jQuery(document).ready(function () {
     ========================================================================== */
     jQuery('.fancybox').fancybox({
         helpers: {
-            title: null,
             media: {},
             overlay: {
-                speedOut: 0
-            }
+                speedOut: 0,
+                 locked: false
+            },
         }
     });
-
+    // $('.fancybox').fancybox();
 
     /* ==========================================================================
     FitVid
