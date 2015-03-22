@@ -45,6 +45,7 @@
         <link rel="stylesheet" media="screen" href="yamm/yamm/yamm.css" >
         <!-- <link rel="stylesheet" media="screen" href="yamm/demo/css/bootstrap-theme.min.css"> -->
         <script type="text/javascript" src="owl-carousel/assets/js/jquery-1.9.1.min.js"></script>
+         <script src="js/modernizr.custom.min.js"></script>
         <script type="text/javascript">
             /*$.ajax({
                 url: "https://appment.s3.amazonaws.com/products.json",
@@ -60,19 +61,89 @@
                             "productId": 1,
                             "productName": "test",
                             "productimagename": "t1.png",
-                            "productdesc": "sdsdsdsdsds sdsds"
+                            "productdesc": "Product 1"
                         },
                         {
-                            "productId": 1,
+                            "productId": 2,
                             "productName": "test1",
                             "productimagename": "t2.png",
-                            "productdesc": "sdsdsdsds22ds sdsds"
+                            "productdesc": "Product 2"
+                        },
+                        {
+                            "productId": 3,
+                            "productName": "test2",
+                            "productimagename": "t1.png",
+                            "productdesc": "Product 3"
+                        },
+                        {
+                            "productId": 4,
+                            "productName": "test3",
+                            "productimagename": "t2.png",
+                            "productdesc": "Product 4"
+                        },
+                        {
+                            "productId": 5,
+                            "productName": "test4",
+                            "productimagename": "t1.png",
+                            "productdesc": "Product 5"
+                        },
+                        {
+                            "productId": 6,
+                            "productName": "test5",
+                            "productimagename": "t2.png",
+                            "productdesc": "Product 6"
+                        },
+                        {
+                            "productId": 7,
+                            "productName": "test7",
+                            "productimagename": "t2.png",
+                            "productdesc": "Product 7"
+                        },
+                        {
+                            "productId": 8,
+                            "productName": "test8",
+                            "productimagename": "t2.png",
+                            "productdesc": "Product 8"
+                        },
+                        {
+                            "productId": 9,
+                            "productName": "test9",
+                            "productimagename": "t2.png",
+                            "productdesc": "Product 9"
+                        },
+                        {
+                            "productId": 10,
+                            "productName": "test10",
+                            "productimagename": "t2.png",
+                            "productdesc": "Product 10"
+                        },
+                        {
+                            "productId": 11,
+                            "productName": "test11",
+                            "productimagename": "t2.png",
+                            "productdesc": "Product 11"
+                        },
+                        {
+                            "productId": 12,
+                            "productName": "test12",
+                            "productimagename": "t2.png",
+                            "productdesc": "Product 12"
                         }
                     ];
                     $.each(products, function(index, element){
-                        $('#prod').append('<div class="col-xs-6 col-sm-2"><a href="https://appment.s3.amazonaws.com/'+element.productimagename+'" title="'+element.productdesc+'" class="thumbnail fancybox">'+
+                        if(index < 7){
+                            $('#prod').append('<div class="col-xs-6 col-sm-2"><a href="https://appment.s3.amazonaws.com/'+element.productimagename+'" title="'+element.productdesc+'" class="thumbnail fancybox">'+
                             '<img alt="150x190" src="https://appment.s3.amazonaws.com/'+element.productimagename+'"></a>'+
                             '<div>'+element.productdesc+'</div></div>');
+                            console.log("_______________");
+                            console.log(index);
+                        }else{
+                            $('#prod').append('<div class="col-xs-6 col-sm-2" hidden="hidden"><a href="https://appment.s3.amazonaws.com/'+element.productimagename+'" title="'+element.productdesc+'" class="thumbnail fancybox">'+
+                            '<img alt="150x190" src="https://appment.s3.amazonaws.com/'+element.productimagename+'"></a>'+
+                            '<div>'+element.productdesc+'</div></div>');
+                            console.log("_______________12121");
+                            console.log(index);
+                        }
                     });
                 });
 
@@ -105,7 +176,7 @@
                         <div class="row">
                             <div class="col-md-6 col-sm-6">
                                 <div class="info-menu">
-                                    <span><i class="fa fa-envelope-o"></i>info@jainpharmaceuticals.com</span>
+                                    <span><i class="fa fa-envelope-o"></i>info@jainpharma.com</span>
                                     <span><i class="fa fa-phone"></i>(080) 2345678</span>
                                 </div>
                             </div>
@@ -470,12 +541,12 @@
                                     <div id="panel1" class="panel-collapse collapse in">
                                         <div class="panel-body">
                                             <p><ul style="circle">
-                                                <li>INJ.ACE 1GM</li>
-                                                <li>INJ.ACT-TZ 4.5GM</li>
-                                                <li>INJ.JCEF 1.5GM</li>
-                                                <li>INJ.T-JET 50GM</li>
-                                                <li>INJ.J-PLAN400/200MG</li>
-                                                <li>INJ.DORIKLIN 500MG</li>
+                                                <li><a href="images/001.jpg" title="mYpic" class="fancybox">INJ.ACE 1GM</a></li>
+                                                <li><a href="images/001.jpg" title="mYpic" class="fancybox">INJ.ACT-TZ 4.5GM</a></li>
+                                                <li><a href="images/001.jpg" title="mYpic" class="fancybox">INJ.JCEF 1.5GM</a></li>
+                                                <li><a href="images/001.jpg" title="mYpic" class="fancybox">INJ.T-JET 50GM</a></li>
+                                                <li><a href="images/001.jpg" title="mYpic" class="fancybox">INJ.J-PLAN400/200MG</a></li>
+                                                <li><a href="images/001.jpg" title="mYpic" class="fancybox">INJ.DORIKLIN 500MG</a></li>
                                             </ul>
                                             </p>
                                         </div>
@@ -492,16 +563,16 @@
                                     <div id="panel2" class="panel-collapse collapse">
                                         <div class="panel-body">
                                             <p><ul style="circle">
-                                                <li>TRICHONIC</li>
-                                                <li>NUSOL 30GM</li>
-                                                <li>LAVINA CREAM/LOTION</li>
-                                                <li>NUTRET 5 /10/20MG</li>
-                                                <li>NUTEX 10/25 MG</li>
-                                                <li>FELIX SHAMPO</li>
-                                                <li>ITZ CAPSULES</li>
-                                                <li>REVO FOAM FACE WASH</li>
-                                                <li>GLORIA CREAM</li>
-                                                <li>AGLEA SERUM</li>
+                                                <li><a href="images/001.jpg" title="mYpic" class="fancybox">TRICHONIC</a></li>
+                                                <li><a href="images/001.jpg" title="mYpic" class="fancybox">NUSOL 30GM</a></li>
+                                                <li><a href="images/001.jpg" title="mYpic" class="fancybox">LAVINA CREAM/LOTION</a></li>
+                                                <li><a href="images/001.jpg" title="mYpic" class="fancybox">NUTRET 5 /10/20MG</a></li>
+                                                <li><a href="images/001.jpg" title="mYpic" class="fancybox">NUTEX 10/25 MG</a></li>
+                                                <li><a href="images/001.jpg" title="mYpic" class="fancybox">FELIX SHAMPO</a></li>
+                                                <li><a href="images/001.jpg" title="mYpic" class="fancybox">ITZ CAPSULES</a></li>
+                                                <li><a href="images/001.jpg" title="mYpic" class="fancybox">REVO FOAM FACE WASH</a></li>
+                                                <li><a href="images/001.jpg" title="mYpic" class="fancybox">GLORIA CREAM</a></li>
+                                                <li><a href="images/001.jpg" title="mYpic" class="fancybox">AGLEA SERUM</a></li>
                                             </ul>
                                             </p>
                                         </div>
@@ -518,13 +589,13 @@
                                     <div id="panel3" class="panel-collapse collapse">
                                         <div class="panel-body">
                                             <p><ul style="circle">
-                                                <li>GLOBSURE POWDER</li>
-                                                <li>C-MAX POWDER</li>
-                                                <li>MAX /MAX –SF POWDER</li>
-                                                <li>CAP.MAX</li>
-                                                <li>CAP.SALVEO</li>
-                                                <li>CAP.LQUIDATE.</li>
-                                                <li>REKON POWDER</li>
+                                                <li><a href="images/001.jpg" title="mYpic" class="fancybox">GLOBSURE POWDER</a></li>
+                                                <li><a href="images/001.jpg" title="mYpic" class="fancybox">C-MAX POWDER</a></li>
+                                                <li><a href="images/001.jpg" title="mYpic" class="fancybox">MAX /MAX –SF POWDER</a></li>
+                                                <li><a href="images/001.jpg" title="mYpic" class="fancybox">CAP.MAX</a></li>
+                                                <li><a href="images/001.jpg" title="mYpic" class="fancybox">CAP.SALVEO</a></li>
+                                                <li><a href="images/001.jpg" title="mYpic" class="fancybox">CAP.LQUIDATE.</a></li>
+                                                <li><a href="images/001.jpg" title="mYpic" class="fancybox">REKON POWDER</a></li>
                                             </ul>
                                             </p>
                                         </div>
@@ -607,7 +678,7 @@
                                     <li>
                                         <strong>E-mail</strong>
                                         <p>
-                                            Support: <a href="mailto:support@jainpharmaceuticals.com">support@jainpharmaceuticals.com</a>
+                                            Support: <a href="mailto:support@jainpharma.com">support@jainpharma.com</a>
                                         </p>
                                     </li>
                                 </ul>
@@ -692,10 +763,30 @@
         <script type="text/javascript" src="js/scripts.js"></script>
 
         <script type="text/javascript" src="js/jquery.contact.js"></script>
+        <!-- <script type="text/javascript" src="js/jquery.shuffle.modernizr.js"></script> -->
         <!--[if lt IE 9]>
             <script src="js/plugins/html5shiv.js"></script>
             <script src="js/plugins/selectivizr.js"></script>
         <![endif]-->
+        <script type="text/javascript">
+            var prod = document.getElementById("prod");
+
+            function _shuffling(){
+                var nodes = prod.children, i = 0;
+                nodes = Array.prototype.sort.call(nodes);
+                while(i < nodes.length) {
+                    if(i < 7){
+                        nodes[i].removeAttribute("hidden");
+                    }else{
+                        nodes[i].setAttribute("hidden", "hidden");
+                    }
+                   prod.appendChild(nodes[i]);
+                   ++i;
+                }
+                setTimeout(function(){  _shuffling(); }, 30000);
+            };
+            _shuffling();
+        </script>
         <script type="text/javascript">
         $(document).ready(function() {
           $("#owl-demo").owlCarousel({
@@ -726,7 +817,7 @@
           });
         });
         </script>
-        </script>
+        <script src="js/jquery.shuffle.js"></script>
         <script src="js/run_prettify.js?lang=css"></script>
     </body>
 </html>

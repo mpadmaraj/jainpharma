@@ -20,7 +20,7 @@ jQuery(document).ready(function () {
             usersubject = jQuery('#contact-subject');
             usermessage = jQuery('#contact-message');
             isvalid = 1;
-            url = "php/contact-form/php/contact.php";
+            url = "https://mandrillapp.com/api/1.0/messages/send.json";
 
             if (username.val() === "") {
                 jQuery('#ResponseModal-title').html('Contact Us');
@@ -69,9 +69,23 @@ jQuery(document).ready(function () {
 			}
 
 
-            jQuery.post(url, { username: username.val(), useremail: useremail.val(), usersubject: usersubject.val(), usermessage: usermessage.val(), isvalid: isvalid }, function (data) {
-
-                if (data === 'success') {
+            jQuery.post(url, { 
+                'key': '6OwpauXqxEpolQP8bCPLYA',
+                'message': {
+                              'from_email': useremail.val(),
+                              'to': [
+                                  {
+                                    'email': 'support@jainpharma.com',
+                                    'name': useremail.val(),
+                                    'type': 'to'
+                                  }
+                                ],
+                              'autotext': 'true',
+                              'subject': usersubject.val(),
+                              'html': usermessage.val() 
+                          }
+            }, function (data) {
+                if (data[0].status === 'sent') {
                     jQuery('#ResponseModal-title').html('Contact Us');
                     jQuery('#ResponseModal').modal('show');
                     jQuery('#ResponseModalLabel').html('<i class="glyphicon glyphicon-ok-circle nesto_success"></i>');
