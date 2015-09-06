@@ -801,7 +801,7 @@ body.one-page #header-menu li.active a:hover { color: #f05557 !important; }
     margin: 10px 0; 
     font-size: 30px;
     font-weight: 700;
-    line-height: 50px;
+    /*line-height: 50px;*/
     letter-spacing: 1px;
     text-transform: uppercase;
     font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;

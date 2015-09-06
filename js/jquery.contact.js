@@ -70,13 +70,13 @@ jQuery(document).ready(function () {
 
 
             jQuery.post(url, { 
-                'key': '6OwpauXqxEpolQP8bCPLYA',
+                'key': 'iJz9ZaOypAjbHuhV7B9Epw',
                 'message': {
                               'from_email': useremail.val(),
                               'to': [
                                   {
-                                    'email': 'support@jainpharma.com',
-                                    'name': useremail.val(),
+                                    'email': 'info@jainpharma.com',
+                                    'name': username.val(),
                                     'type': 'to'
                                   }
                                 ],

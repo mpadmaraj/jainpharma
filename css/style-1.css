@@ -94,3 +94,7 @@ body.dark-version .nesto-form .buttons-container a:hover {
 }
 
 .btn-nesto:hover { background-color: #242434; }
+
+.cl + .cl + .cl + .cl + .cl + .cl + .cl{
+    display: none;
+}
